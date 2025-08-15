@@ -1,0 +1,123 @@
+<html>
+<head>
+</head>
+<body bgcolor="cyan">
+<h1 align="center"><marquee><b>MY Dtails</b></marquee></h1>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="fname">Father's name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+
+  <label for="lname">Mother's name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+<br>
+ <label for="lname">hobby:</label><br>
+  <input type="text" id="lname" name="lname">
+<p>
+<label>Phone 
+<input type="tel" name="phone_number">
+</label>
+</p>
+
+<p>
+<label>Email 
+<input type="email" name="email_address">
+</label>
+</p>
+<p>
+  <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+</p>
+<p>
+    <label for="psw-repeat"><b>conform Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+</p> 
+  <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" for="age">Age: </label>
+      </div>
+      <div class="rightTab">
+        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age" required>
+      </div>
+    </div>
+ <div class="rowTab">
+      <div class="labels">
+        <label id="dob-label" for="dob">D.O.B: </label>
+      </div>
+      <div class="rightTab">
+        <input type="date" name="dob" id="iddob" class="input-field" required>
+      </div>
+    </div>
+  <label for="lname">College name:</label><br>
+  <input type="text" id="lname" name="lname">
+<br>
+   <div class="rowTab">
+      <div class="labels">
+        <label for="department">Department: </label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="department" class="dropdown">
+        <option disabled value>Select an option</option>
+        <option value="it">IT</option>
+        <option value="cse">bca</option>
+        <option value="ece">bba</option>
+        <option value="mech">mca</option>
+        <option value="civil">mba</option>
+        <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+       <div class="rowTab">
+      <div class="labels">
+        <label for="gender">Gender: </label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label><input name="radio-buttons" value="male"  type="radio" class="userRatings" >Male</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="female"  type="radio" class="userRatings" >Female</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="others"  type="radio" class="userRatings" >Others</label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="address">Address: </label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="address" placeholder="Enter your address here..."></textarea>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="pincode">Pincode: </label>
+      </div>
+      <div class="rightTab">
+       <input type="number" name="pincode" id="idpincode" class="input-field" style="height:20px;resize:vertical;" placeholder="6 - - - - -"></div>
+    </div>
+    
+       <div class="rowTab">
+      <div class="labels">
+        <label for="language">Language Known: </label>
+      </div>
+      <div class="rightTab">
+        <ul id="language" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="english" type="checkbox" class="userRatings">English</label></li>
+          <li class="checkbox"><label><input name="prefer" value="tamil" type="checkbox" class="userRatings">Tamil</label></li>
+          <li class="checkbox"><label><input name="prefer" value="hindi" type="checkbox" class="userRatings">Hindi</label></li>
+          <li class="checkbox"><label><input name="prefer" value="malayalam" type="checkbox" class="userRatings">Malayalam</label></li>
+          <li class="checkbox"><label><input name="prefer" value="kannada" type="checkbox" class="userRatings">Gujarati</label></li>
+          <li class="checkbox"><label><input name="prefer" value="telugu" type="checkbox" class="userRatings">Telugu</label></li>
+          <li class="checkbox"><label><input name="prefer" value="others" type="checkbox" class="userRatings">Others</label></li>
+        </ul>
+      </div>
+    </div>
+    
+    <button id="submit" type="submit">Submit</button>
+    <button id="reset" type="reset">Reset</button>
+</form>
+</body>
+</html>

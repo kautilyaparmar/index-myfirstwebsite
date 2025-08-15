@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+aside {
+  flex: 1 1 200px;
+  padding: 1rem;
+  background: #eaeaea;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  flex: 3 1 600px;
+  padding: 1rem;
+}
+
+.post {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+function filterPosts(category) {
+  const posts = document.querySelectorAll('.post');
+  posts.forEach(post => {
+    if (category === 'all' || post.dataset.category === category) {
+      post.style.display = 'block';
+    } else {
+      post.style.display = 'none';
+    }
+  });
+}
+/* Blog Section */
+#blog {
+  margin-top: 3rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.blog-post {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.blog-post:hover {
+  transform: scale(1.02);
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-post h3 {
+  margin: 1rem;
+  color: #0077cc;
+}
+
+.blog-post p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tech Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Tech Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="new.html">Projects</a></li>
+        <li><a href="oct3.html">About</a></li>
+        <li><a href="contect.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<section id="blog">
+  <h2>Latest Blog Posts</h2>
+  <div class="blog-grid">
+    <article class="blog-post">
+      <img src="portfolio1.png" alt="Blog Image 1" />
+      <h3>How I Built My First Portfolio</h3>
+      <p>Learn how I designed and deployed my first personal website using HTML, CSS, and GitHub Pages.</p>
+    </article>
+
+    <article class="blog-post">
+      <img src="fit.jpeg" alt="Blog Image 2" />
+      <h3>Fitness & Focus: My Daily Routine</h3>
+      <p>Discover how fitness fuels my productivity and helps me stay focused while coding and learning.</p>
+    </article>
+
+    <article class="blog-post">
+      <img src="ai.png.png" alt="Blog Image 3" />
+      <h3>Exploring AI: My First Steps</h3>
+      <p>A beginner’s journey into artificial intelligence, expert systems, and how I’m applying it to real projects.</p>
+    </article>
+  </div>
+</section>
+  <div class="container">
+    <aside>
+      <h3>Categories</h3>
+      <ul id="categoryList">
+        <li><a href="all.html"><button onclick="filterPosts('all')">All</button></a></li>
+        <li><button onclick="filterPosts('Programming')">Programming</button></li>
+        <li><button onclick="filterPosts('Web Development')">Web Development</button></li>
+        <li><button onclick="filterPosts('AI')">AI & Machine Learning</button></li>
+        <li><button onclick="filterPosts('Design')">UI/UX Design</button></li>
+      </ul>
+    </aside>
+
+    <main id="blogPosts">
+      <article class="post" data-category="Programming">
+        <h2>Getting Started with VB.NET</h2>
+        <p>Learn how to build desktop apps using VB.NET and MS Access.</p>
+      </article>
+
+      <article class="post" data-category="Web Development">
+        <h2>Responsive Design with CSS Grid</h2>
+        <p>Master layout techniques using modern CSS Grid and Flexbox.</p>
+      </article>
+
+      <article class="post" data-category="AI">
+        <h2>Intro to Expert Systems</h2>
+        <p>Explore knowledge bases, inference engines, and user interfaces.</p>
+      </article>
+
+      <article class="post" data-category="Design">
+        <h2>Designing Accessible Interfaces</h2>
+        <p>Tips for creating inclusive and user-friendly UI experiences.</p>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Tech Blog. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

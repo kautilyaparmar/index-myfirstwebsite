@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Develop Responsive Front-End Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9ff3, #feca57, #1dd1a1);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar li {
+      margin: 0 1rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #feca57;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 1rem auto;
+      padding: 2rem;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .link-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      color: #333;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+      text-decoration: none;
+    }
+
+    .link-button:hover {
+      transform: scale(1.1);
+      background-color: #feca57;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      .navbar ul {
+        flex-direction: column;
+      }
+
+      .card {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>🎨 Develop Responsive Front-End Website</h1>
+    <p>Built with core technologies and animated design principles.</p>
+    <a href="https://github.com/kautilyaparmar" target="_blank" class="link-button">View GitHub Repo</a>
+  </section>
+
+  <section id="skills">
+    <h2>💡 My Skills</h2>
+    <div class="card">
+      <h3>HTML & CSS</h3>
+      <p>Responsive layouts and visual styling.</p>
+    </div>
+    <div class="card">
+      <h3>JavaScript</h3>
+      <p>Dynamic features and interactivity.</p>
+    </div>
+    <div class="card">
+      <h3>Angular / Vue.js</h3>
+      <p>Modular architecture and reactive UI components.</p>
+    </div>
+    <div class="card">
+      <h3>UI/UX Animation</h3>
+      <p>Smooth transitions and engaging visuals.</p>
+    </div>
+    <div class="card">
+      <h3>Testing & Debugging</h3>
+      <p>Cross-browser compatibility and performance audits using Lighthouse.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>🚀 Projects</h2>
+    <div class="card">
+      <h3>Animated Dashboard</h3>
+      <p>Real-time updates and transitions using Angular or Vue.js.</p>
+    </div>
+    <div class="card">
+      <h3>Responsive Blog</h3>
+      <p>Mobile-first layout with scroll-triggered animations.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📬 Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('Thanks for reaching out!');">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
